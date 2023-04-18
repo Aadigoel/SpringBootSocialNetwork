@@ -12,10 +12,6 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * Created by Dmitrii on 03.10.2019.
- */
-
 @Component
 @RequiredArgsConstructor
 public class PageToPageDtoUserConverter implements Converter<Page<User>, PageDTO<UserDTO>> {

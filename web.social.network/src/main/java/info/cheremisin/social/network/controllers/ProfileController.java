@@ -1,9 +1,7 @@
 package info.cheremisin.social.network.controllers;
 
-import info.cheremisin.social.network.dto.MessageDTO;
 import info.cheremisin.social.network.dto.UserDTO;
 import info.cheremisin.social.network.service.FriendsService;
-import info.cheremisin.social.network.service.MessagesService;
 import info.cheremisin.social.network.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -27,14 +25,11 @@ public class ProfileController {
 
     private final UserService userService;
     private final FriendsService friendsService;
-    private final MessagesService messagesService;
 
     @GetMapping("/profile")
     public String getProfilePage(Model model, HttpServletRequest request) {
         UserDTO user = getUserFromSession(request);
         model.addAttribute("user", user);
-        MessageDTO recentMessage = messagesService.getRecentMessage(user.getId());
-        model.addAttribute("recentMessage", recentMessage);
         Set<UserDTO> friends = friendsService.getAcceptedFriendshipUsers(user.getId());
         model.addAttribute("friends", friends);
         return "profile";
