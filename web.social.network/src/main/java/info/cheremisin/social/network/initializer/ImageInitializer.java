@@ -15,9 +15,7 @@ import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-/**
- * Created by Dmitrii on 06.10.2019.
- */
+
 @Component
 @RequiredArgsConstructor
 public class ImageInitializer implements ApplicationListener<ContextRefreshedEvent> {

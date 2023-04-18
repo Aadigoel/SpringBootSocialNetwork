@@ -39,10 +39,10 @@
             <form th:if="${session.user != null}" th:action="@{/logout}" method="POST" class="navbar-form navbar-right">
                 <button type="submit" class="btn btn-success" th:text="#{logout}">Выход</button>
             </form>
-            <div class="navbar-right" >
+            <!-- <div class="navbar-right" >
                 <a th:href="@{?(lang=ru)}" class="navbar-brand lang" th:text="#{russian}">Ru</a>
                 <a th:href="@{?(lang=en)}" class="navbar-brand lang" th:text="#{english}">En</a>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

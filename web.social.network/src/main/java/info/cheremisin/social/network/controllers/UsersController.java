@@ -19,9 +19,6 @@ import javax.servlet.http.HttpServletRequest;
 
 import static info.cheremisin.social.network.utils.ServerUtils.getUserFromSession;
 
-/**
- * Created by Dmitrii on 03.10.2019.
- */
 @Controller
 @RequestMapping("/user")
 @RequiredArgsConstructor
