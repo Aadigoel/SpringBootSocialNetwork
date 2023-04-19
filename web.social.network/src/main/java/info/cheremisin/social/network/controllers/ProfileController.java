@@ -1,5 +1,6 @@
 package info.cheremisin.social.network.controllers;
 
+import info.cheremisin.social.network.dto.MessageDTO;
 import info.cheremisin.social.network.dto.UserDTO;
 import info.cheremisin.social.network.service.FriendsService;
 import info.cheremisin.social.network.service.UserService;
